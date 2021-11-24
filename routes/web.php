@@ -16,6 +16,9 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
-        'name' => 'Jethro May'
+        'name' => 'Jethro May',
+        'frameworks' => [
+            'Laravel', 'Vue'
+        ]
     ]);
 });
