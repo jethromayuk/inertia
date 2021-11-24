@@ -1,7 +1,11 @@
 <template>
-    <h1>Hello world</h1>
+    <h1>Hello {{ name }}</h1>
 </template>
 
 <script>
-export default {};
+export default {
+    props: {
+        name: String
+    }
+};
 </script>
