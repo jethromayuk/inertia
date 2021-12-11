@@ -8,8 +8,6 @@
         <link href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css' rel='stylesheet'>
     </head>
     <body>
-        <section class="p-8">
-            @inertia
-        </section>
+        @inertia
     </body>
 </html>
