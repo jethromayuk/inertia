@@ -1,7 +1,5 @@
 <template>
-    <Head>
-        <title>Users</title>
-    </Head>
+    <Head title="Users" />
 
     <h1 class="text-4xl font-bold">Users</h1>
 
@@ -15,7 +13,5 @@
 </template>
 
 <script setup>
-import { Head } from '@inertiajs/inertia-vue3'
-
 defineProps({ time: String })
 </script>
