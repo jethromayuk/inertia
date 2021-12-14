@@ -19,7 +19,7 @@ createInertiaApp({
       .mount(el)
   },
 
-  title: title => "My App - " + title
+  title: title => `My App - ${title}`
 });
 
 InertiaProgress.init({
