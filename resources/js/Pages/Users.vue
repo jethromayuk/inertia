@@ -1,15 +1,16 @@
 <template>
     <Head title="Users" />
 
-    <h1 class="text-4xl font-bold">Users</h1>
+    <div class="flex justify-between mb-6">
+        <h1 class="text-4xl font-bold">Users</h1>
 
-    <Nav />
+        <input v-model="search" type="text" placeholder="Search..." class="border px-2 rounded-lg">
+    </div>
 
-    <div class="flex flex-col mt-8">
+    <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="shadow ove
-  components: { Pagination },rflow-hidden border-b border-gray-200 sm:rounded-lg">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                 <table class="min-w-full divide-y divide-gray-200">
                     <tbody>
                         <tr v-for="user in users.data" :key="user.id" class="bg-white">
@@ -33,6 +34,13 @@
 
 <script setup>
 import Pagination from "../Shared/Pagination";
+import { ref, watch } from 'vue';
 
-defineProps({ users: Object })
+defineProps({ users: Object });
+
+let search = ref('');
+
+watch(search, value => {
+    console.log(value);
+})
 </script>
