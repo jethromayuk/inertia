@@ -5,6 +5,9 @@
                 <h1 class="font-bold text-lg">My App</h1>
 
                 <p class="text-sm ml-4">Welcome back {{ $page.props.auth.user.username }}!</p>
+                <!-- OR COMPUTED PROP
+                    <p class="text-sm ml-4">Welcome back {{ username }}!</p>
+                -->
             </div>
             <Nav />
         </header>
@@ -23,6 +26,12 @@ import Nav from './Nav';
 export default {
     components: {
         Nav
-    }
+    },
+    // OR COMPUTED PROP
+    // computed: {
+    //     username() {
+    //         return this.$page.props.auth.user.username
+    //     }
+    // }
 }
 </script>
