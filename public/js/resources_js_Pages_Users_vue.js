@@ -151,6 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.links, function (link) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(link.url ? 'Link' : 'span'), {
+      key: link,
       href: link.url,
       innerHTML: link.label,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["px-1", {
@@ -160,8 +161,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, null, 8
     /* PROPS */
     , ["href", "innerHTML", "class"]);
-  }), 256
-  /* UNKEYED_FRAGMENT */
+  }), 128
+  /* KEYED_FRAGMENT */
   ))]);
 }
 
