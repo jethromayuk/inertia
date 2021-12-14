@@ -5,13 +5,11 @@
 
     <Nav />
 
-    <div style="margin-top: 800px;">
-        The current time is {{ time }}
-
-        <Link href="/users" class="text-blue-400" preserve-scroll>Refresh</Link>
-    </div>
+    <ul>
+        <li v-for="user in users" :key="user.id" v-text="user.name"></li>
+    </ul>
 </template>
 
 <script setup>
-defineProps({ time: String })
+defineProps({ users: Array })
 </script>
