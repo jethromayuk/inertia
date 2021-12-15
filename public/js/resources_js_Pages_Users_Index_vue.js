@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
         preserveState: true,
         replace: true
       });
-    }, 300));
+    }, 500));
     var __returned__ = {
       props: props,
       search: search,
