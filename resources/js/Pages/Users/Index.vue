@@ -52,7 +52,7 @@ let search = ref(props.filters.search);
 
 watch(search, debounce(function (value) {
     Inertia.get('/users', { search: value }, { preserveState: true, replace: true, });
-}, 500));
+}, 300));
 </script>
 
 <!-- OPTIONS API
