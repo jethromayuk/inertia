@@ -3,13 +3,13 @@
 
     <h1 class="text-3xl">Create New User</h1>
 
-    <form action="/" method="POST" class="max-w-md mx-auto mt-8">
+    <form @submit.prevent="submit" class="max-w-md mx-auto mt-8">
         <div class="mb-6">
             <label for="name" class="block mb-2 uppercase font-bold text-xs text-gray-700">
                 Name
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input v-model="form.name" class="border border-gray-400 p-2 w-full"
                 type="text"
                 name="name"
                 id="name"
@@ -21,7 +21,7 @@
                 Email
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input v-model="form.email" class="border border-gray-400 p-2 w-full"
                 type="email"
                 name="email"
                 id="email"
@@ -33,7 +33,7 @@
                 Password
             </label>
 
-            <input class="border border-gray-400 p-2 w-full"
+            <input v-model="form.password" class="border border-gray-400 p-2 w-full"
                 type="password"
                 name="password"
                 id="password"
@@ -48,6 +48,17 @@
     </form>
 </template>
 
-<script>
-export default {}
+<script setup>
+import { reactive } from "vue";
+import { Inertia } from "@inertiajs/inertia";
+
+let form = reactive({
+    name: '',
+    email: '',
+    password: ''
+});
+
+let submit = () => {
+    Inertia.post('/users', form);
+}
 </script>
