@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function() {
 
     Route::get('/users/create', function() {
         return Inertia::render('Users/Create');
-    })->middleware('can:create,App\Models\User');
+    })->can('create', 'App\Models\User');
 
     Route::post('/users', function() {
         // Validate
