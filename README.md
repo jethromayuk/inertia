@@ -1,4 +1,4 @@
-# Laravel Inertia 
+# Laravel Inertia Demo
 
 A repository to display Inertia basics. 
 
