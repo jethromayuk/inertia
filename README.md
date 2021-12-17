@@ -1,3 +1,8 @@
 # Laravel Inertia 
 
-A repository to display Inertia basics, a working login form, create user form and simple role based authorization.
+A repository to display Inertia basics. 
+
+1. Working login form. 
+2. Create user form and simple role based authorization allowing for showing/hiding the create user link.
+3. Working table search.
+4. Layout file and shared components.
