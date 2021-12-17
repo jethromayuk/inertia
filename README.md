@@ -7,3 +7,4 @@ A repository to display Inertia basics.
 3. User table and pagination.
 3. Working table search.
 4. Layout file and shared components.
+5. Added very simple policy logout to demo showing/hiding functionality such as edit links.

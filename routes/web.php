@@ -25,8 +25,11 @@ Route::middleware('auth')->group(function() {
                 ->paginate(10)
                 ->withQueryString()
                 ->through(fn($user) => [
-                'id' => $user->id,
-                'name' => $user->name
+                    'id' => $user->id,
+                    'name' => $user->name,
+                    'can' => [
+                        'edit' => Auth::user()->can('edit', $user)
+                    ]
                 ]),
             'filters' => Request::only(['search']),
             'can' => [
